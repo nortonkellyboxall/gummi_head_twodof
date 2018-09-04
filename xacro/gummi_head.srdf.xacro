@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 <robot name="gummi" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:macro name="head">
+<xacro:macro name="two_dof_head">
     <joint name="head_yaw" />
     <joint name="head_pitch" />
 </xacro:macro>
 
-<xacro:macro name="group_state_head">
+<xacro:macro name="group_state_two_dof_head">
   <joint name="head_yaw" value="0" />
   <joint name="head_pitch" value="0" />
 </xacro:macro>

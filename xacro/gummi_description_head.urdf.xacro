@@ -22,7 +22,7 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://two_dof_head/meshes/head_yaw.stl" />
+            filename="package://gummi_head_$(env ROS_GUMMI_HEAD)/meshes/head_yaw.stl" />
         </geometry>
         <material
           name="">
@@ -36,7 +36,7 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://two_dof_head/meshes/head_yaw_CH.stl" />
+            filename="package://gummi_head_$(env ROS_GUMMI_HEAD)/meshes/head_yaw_CH.stl" />
         </geometry>
       </collision>
     </link>
@@ -78,7 +78,7 @@
             rpy="0 0 0" />
           <geometry>
             <mesh
-              filename="package://two_dof_head/meshes/head_pitch.stl" />
+              filename="package://gummi_head_$(env ROS_GUMMI_HEAD)/meshes/head_pitch.stl" />
           </geometry>
           <material
             name="">
@@ -92,7 +92,7 @@
             rpy="0 0 0" />
           <geometry>
             <mesh
-              filename="package://two_dof_head/meshes/head_pitch_CH.stl" />
+              filename="package://gummi_head_$(env ROS_GUMMI_HEAD)/meshes/head_pitch_CH.stl" />
           </geometry>
         </collision>
       </link>

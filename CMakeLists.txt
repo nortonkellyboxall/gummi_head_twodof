@@ -7,12 +7,7 @@ project(gummi_head_twodof)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-  dynamixel_controllers
-  roscpp
-  rospy
-  std_msgs
-)
+find_package(catkin REQUIRED COMPONENTS xacro)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -116,10 +111,10 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(
+#include_directories(
 # include
-  ${catkin_INCLUDE_DIRS}
-)
+#  ${catkin_INCLUDE_DIRS}
+#)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -198,3 +193,8 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+############### TO UPDATE SETUP.BASH FILE ###############
+execute_process(COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/scripts/update_setupbash.sh
+WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+)

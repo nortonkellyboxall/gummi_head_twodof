@@ -48,7 +48,7 @@
   <!--   <test_depend>gtest</test_depend> -->
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
-  <buildtool_depend>catkin</buildtool_depend>
+  <!-- <buildtool_depend>catkin</buildtool_depend>
   <build_depend>dynamixel_controllers</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>rospy</build_depend>
@@ -60,7 +60,10 @@
   <exec_depend>dynamixel_controllers</exec_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend> -->
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>python-ruamel.yaml</buildtool_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
