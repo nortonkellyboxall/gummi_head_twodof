@@ -1,0 +1,11 @@
+joints:
+  head_yaw:
+    effort: 1.0
+    gradual_startup_position: 0
+    gradual_startup_time: 1.0
+    antagonist: False
+  head_pitch:
+    effort: 1.0
+    gradual_startup_position: 0
+    gradual_startup_time: 1.0
+    antagonist: False

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot>
+  <link
+      name="head_yaw">
+      <inertial>
+        <origin
+          xyz="0.0192090313803226 -0.000209732444885397 -0.00477606520095217"
+          rpy="0 0 0" />
+        <mass
+          value="0.0573922743530686" />
+        <inertia
+          ixx="5.98272304285402E-07"
+          ixy="-9.55132100709239E-09"
+          ixz="2.00959509125472E-06"
+          iyy="7.34863588332809E-06"
+          iyz="2.84343934345717E-09"
+          izz="6.7503906079721E-06" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://two_dof_head/meshes/head_yaw.stl" />
+        </geometry>
+        <material
+          name="">
+          <color
+            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://two_dof_head/meshes/head_yaw_CH.stl" />
+        </geometry>
+      </collision>
+    </link>
+    <joint
+      name="head_yaw"
+      type="continuous">
+      <origin
+        xyz="0.005 0.100 0.188"
+        rpy="3.14 0 0" />
+      <parent
+        link="base_link" />
+      <child
+        link="head_yaw" />
+      <axis
+        xyz="0 0 1" />
+      <limit
+        effort="0"
+        velocity="1" />
+    </joint>
+    <link
+        name="head_pitch">
+        <inertial>
+          <origin
+            xyz="0.0192090313803226 -0.000209732444885397 -0.00477606520095217"
+            rpy="0 0 0" />
+          <mass
+            value="0.0573922743530686" />
+          <inertia
+            ixx="5.98272304285402E-07"
+            ixy="-9.55132100709239E-09"
+            ixz="2.00959509125472E-06"
+            iyy="7.34863588332809E-06"
+            iyz="2.84343934345717E-09"
+            izz="6.7503906079721E-06" />
+        </inertial>
+        <visual>
+          <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+          <geometry>
+            <mesh
+              filename="package://two_dof_head/meshes/head_pitch.stl" />
+          </geometry>
+          <material
+            name="">
+            <color
+              rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          </material>
+        </visual>
+        <collision>
+          <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+          <geometry>
+            <mesh
+              filename="package://two_dof_head/meshes/head_pitch_CH.stl" />
+          </geometry>
+        </collision>
+      </link>
+      <joint
+        name="head_pitch"
+        type="continuous">
+        <origin
+          xyz="0 0 -0.051202"
+          rpy="1.57 3.14 3.14" />
+        <parent
+          link="head_yaw" />
+        <child
+          link="head_pitch" />
+        <axis
+          xyz="0 0 1" />
+        <limit
+          effort="0"
+          velocity="1" />
+      </joint>
+  </robot>

@@ -1,0 +1,4 @@
+<launch>
+  <rosparam file="$(find two_dof_head)/config/head_yaw.yaml" command="load" ns="head_yaw"/>
+  <rosparam file="$(find two_dof_head)/config/head_pitch.yaml" command="load" ns="head_pitch"/>
+</launch>
