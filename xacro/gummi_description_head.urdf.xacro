@@ -51,7 +51,7 @@
       <child
         link="head_yaw" />
       <axis
-        xyz="0 0 1" />
+        xyz="0 0 -1" />
       <limit
         effort="0"
         velocity="1" />

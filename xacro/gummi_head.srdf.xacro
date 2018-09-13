@@ -1,16 +1,20 @@
 <?xml version="1.0" ?>
 <robot name="gummi" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:macro name="two_dof_head">
+<xacro:macro name="group_head_twodof">
     <joint name="head_yaw" />
     <joint name="head_pitch" />
 </xacro:macro>
 
-<xacro:macro name="group_state_two_dof_head">
+<xacro:macro name="group_state_head_twodof">
   <joint name="head_yaw" value="0" />
   <joint name="head_pitch" value="0" />
 </xacro:macro>
 
+<xacro:macro name="virtual_joints_base">
+  <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+  <virtual_joint name="virtual_joint" type="fixed" parent_frame="map" child_link="base_link" />
+</xacro:macro>
 
 <xacro:macro name="disable_collisions_head">
   <disable_collisions link1="base_link" link2="head_yaw" reason="Adjacent" />

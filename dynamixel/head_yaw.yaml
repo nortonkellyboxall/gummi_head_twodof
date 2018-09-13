@@ -4,7 +4,7 @@ head_yaw_controller:
         module: joint_position_controller
         type: JointPositionController
     joint_name: head_yaw
-    joint_speed: 3.0
+    joint_speed: 5.0
     motor:
         id: 101
         init: 512
