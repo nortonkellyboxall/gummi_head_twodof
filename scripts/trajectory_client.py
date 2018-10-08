@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import roslib
-roslib.load_manifest('two_dof_head')
+roslib.load_manifest('gummi_head_twodof ')
 
 import rospy
 import actionlib
@@ -22,22 +22,20 @@ class Joint:
             rospy.loginfo('Found joint trajectory action!')
 
 
-        def move_joint(self, angles):
-            goal = FollowJointTrajectoryGoal()
-            char = self.name[0] #either 'f' or 'b'
-            goal.trajectory.joint_names = ['head_roll', 'head_pitch']
-            point = JointTrajectoryPoint()
-            point.positions = angles
-            point.time_from_start = rospy.Duration(3)
-            goal.trajectory.points.append(point)
-            self.jta.send_goal_and_wait(goal)
+        # def move_joint(self, angles):
+        #     goal = FollowJointTrajectoryGoal()
+        #     char = self.name[0] #either 'f' or 'b'
+        #     goal.trajectory.joint_names = ['head_yaw', 'head_pitch']
+        #     point = JointTrajectoryPoint()
+        #     point.positions = angles
+        #     point.time_from_start = rospy.Duration(3)
+        #     goal.trajectory.points.append(point)
+        #     self.jta.send_goal_and_wait(goal)
 
 def main():
-            arm = Joint('f_arm')
-            arm.move_joint([2.618,2.618])
-            arm.move_joint([1.83,1.83])
+            arm = Joint('head_joint_trajectory')
 
 
 if __name__ == '__main__':
-      rospy.init_node('joint_position_tester')
+      rospy.init_node('head_joint_trajectory_action_server')
       main()

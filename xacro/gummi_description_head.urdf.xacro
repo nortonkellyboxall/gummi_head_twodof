@@ -44,8 +44,8 @@
       name="head_yaw"
       type="continuous">
       <origin
-        xyz="0.005 0.100 0.188"
-        rpy="3.14 0 0" />
+        xyz="0.005 0.1 0.188"
+        rpy="3.14159265359 0 0" />
       <parent
         link="base_link" />
       <child
@@ -101,7 +101,7 @@
         type="continuous">
         <origin
           xyz="0 0 -0.051202"
-          rpy="1.57 3.14 3.14" />
+          rpy="1.57079632679 3.14159265359 3.14159265359" />
         <parent
           link="head_yaw" />
         <child
