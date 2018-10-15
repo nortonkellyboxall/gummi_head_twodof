@@ -112,4 +112,57 @@
           effort="0"
           velocity="1" />
       </joint>
-  </robot>
+      <link
+        name="camera">
+        <inertial>
+          <origin
+           xyz="0.0484512742480244 0.0139768664666073 0.000956995637939325"
+           rpy="0 0 0" />
+        <mass
+           value="0.0644774651698934" />
+        <inertia
+        ixx="8.67406414845019E-06"
+        ixy="-1.3193756197629E-05"
+        ixz="-3.41916035169704E-06"
+        iyy="4.217442276821E-05"
+        iyz="-4.04257224014858E-07"
+        izz="4.91399139463636E-05" />
+        </inertial>
+        <visual>
+          <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+           filename="package://gummi_head_$(env ROS_GUMMI_HEAD)/meshes/realsense_CH.stl" />
+        </geometry>
+        <material
+          name="">
+          <color
+            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
+        </visual>
+        <collision>
+          <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+         <mesh
+            filename="package://gummi_head_$(env ROS_GUMMI_HEAD)/meshes/realsense_CH.stl" />
+        </geometry>
+        </collision>
+    </link>
+   <joint
+      name="camera"
+      type="fixed">
+      <origin
+        xyz="0.05 0.022 0"
+        rpy="0 1.57079632679 0" />
+      <parent
+        link="head_pitch" />
+      <child
+        link="camera" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+</robot>

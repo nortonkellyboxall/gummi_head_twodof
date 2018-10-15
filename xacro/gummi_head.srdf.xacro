@@ -4,6 +4,7 @@
 <xacro:macro name="group_head_twodof">
     <joint name="head_yaw" />
     <joint name="head_pitch" />
+    <joint name="camera" />
 </xacro:macro>
 
 <xacro:macro name="group_state_head_twodof">
@@ -20,5 +21,8 @@
   <disable_collisions link1="base_link" link2="head_yaw" reason="Adjacent" />
   <disable_collisions link1="head_yaw" link2="head_pitch" reason="Adjacent" />
   <disable_collisions link1="base_link" link2="head_pitch" reason="Never" />
+  <disable_collisions link1="base_link" link2="camera" reason="Never"/>
+  <disable_collisions link1="head_pitch" link2="camera" reason="Adjacent" />
+  <disable_collisions link1="head_yaw" link2="camera" reason="Never" />
 </xacro:macro>
 </robot>
