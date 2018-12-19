@@ -4,14 +4,14 @@
     <rosparam file="$(eval find('gummi_head_' + head) + '/dynamixel/head_yaw.yaml')" command="load"/>
     <node name="head_yaw_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_d
+                --port gummi_ae
                 head_yaw_controller"
           output="screen"/>
 
     <rosparam file="$(eval find('gummi_head_' + head) + '/dynamixel/head_pitch.yaml')" command="load"/>
     <node name="head_pitch_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_d
+                --port gummi_ae
                 head_pitch_controller"
           output="screen"/>
 

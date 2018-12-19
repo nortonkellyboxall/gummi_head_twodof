@@ -42,7 +42,7 @@
     </link>
     <joint
       name="head_yaw"
-      type="continuous">
+      type="revolute">
       <origin
         xyz="0.005 0.1 0.188"
         rpy="3.14159265359 0 0" />
@@ -53,6 +53,8 @@
       <axis
         xyz="0 0 -1" />
       <limit
+        lower="-1.56"
+        upper="1.56"
         effort="0"
         velocity="1" />
     </joint>
@@ -98,10 +100,10 @@
       </link>
       <joint
         name="head_pitch"
-        type="continuous">
+        type="revolute">
         <origin
           xyz="0 0 -0.051202"
-          rpy="1.57079632679 3.14159265359 3.14159265359" />
+          rpy="-1.57079632679 0.0436332 -0.0349066" />
         <parent
           link="head_yaw" />
         <child
@@ -109,6 +111,8 @@
         <axis
           xyz="0 0 1" />
         <limit
+         lower="-0.7853"
+          upper="0.7853"
           effort="0"
           velocity="1" />
       </joint>
