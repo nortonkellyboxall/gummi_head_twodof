@@ -16,7 +16,7 @@ The packages are as follows:
 - [gummi_head_twodof](https://nortonkellyboxall.github.io/gummi_head_twodof/)
 - [gummi_interface](https://nortonkellyboxall.github.io/gummi_interface/)
 - [gummi_moveit](https://github.com/nortonkellyboxall/gummi_moveit)
-- [gummi_hardware_luffy](https://nortonkellyboxall.github.io/gummi_hardware_luffy/)
+- [gummi_hardware_luffy](https://nortonkellyboxall.github.io/gummi_hardware_Luffy/)
 
 Each of these packages are connected and required to be cloned or forked.
 
